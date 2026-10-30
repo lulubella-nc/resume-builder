@@ -1,0 +1,1296 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>土木工程师简历模板</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23162a4d'/%3E%3Ctext x='16' y='22' font-family='Arial' font-size='16' font-weight='bold' fill='%23fff' text-anchor='middle'%3ECV%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://miaoda.feishu.cn">
+<link href="https://miaoda.feishu.cn/fonts/css2?family=Libre+Baskerville:wght@700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#16294d;
+  --navy-2:#223b63;
+  --ink:#1d2226;
+  --muted:#6f7680;
+  --hair:#e3e6eb;
+  --line:#cdd4de;
+  --chip:#eef1f6;
+  --bg:#e9ecf2;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{
+  font-family:"Source Sans 3",system-ui,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--bg);color:var(--ink);line-height:1.5;
+  padding:0;
+}
+.page{
+  --f:1; --s:1;              /* --f=字号/行距缩放，--s=间距缩放，用于自动适配一页 */
+  max-width:920px;margin:0 auto;background:#fff;
+  box-shadow:0 10px 40px rgba(20,35,70,.14);
+  display:grid;grid-template-columns:1fr;border-radius:6px;overflow:hidden;
+}
+.main{padding:calc(34px*var(--s)) calc(30px*var(--s)) calc(40px*var(--s))}
+/* ===== 头像 + 姓名区 ===== */
+.head{display:flex;align-items:center;gap:calc(18px*var(--s));margin-bottom:calc(26px*var(--s))}
+.avatar{
+  width:calc(92px*var(--s));height:calc(92px*var(--s));border-radius:50%;flex:none;
+  background:var(--navy-2);overflow:hidden;position:relative;
+}
+.avatar img{width:100%;height:100%;object-fit:cover;display:block}
+.avatar .ph{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#b9c6de}
+.head h1{
+  font-family:"Libre Baskerville",Georgia,serif;font-weight:700;
+  font-size:calc(34px*var(--f));line-height:1.1;color:var(--navy);letter-spacing:.5px;
+}
+.head .role{
+  margin-top:calc(6px*var(--s));font-size:calc(14px*var(--f));font-weight:700;letter-spacing:3px;
+  color:var(--navy-2);text-transform:uppercase;
+}
+/* ===== 模块标题 ===== */
+.sec{margin-top:calc(30px*var(--s))}
+.sec-title{
+  font-size:calc(13px*var(--f));font-weight:700;letter-spacing:2.5px;text-transform:uppercase;
+  color:var(--navy);display:flex;align-items:center;gap:12px;margin-bottom:calc(14px*var(--s));
+}
+.sec-title::after{content:"";flex:1;height:1px;background:var(--hair)}
+/* ===== 简介 ===== */
+.summary{font-size:calc(15px*var(--f));color:#3a4046;text-align:justify}
+/* ===== 经历 / 教育条目 ===== */
+.entry{margin-bottom:calc(20px*var(--s))}
+.entry:last-child{margin-bottom:0}
+.entry-top{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:2px 12px}
+.entry-role{font-size:calc(16px*var(--f));font-weight:700;color:var(--ink)}
+.entry-org{font-size:calc(15px*var(--f));font-weight:600;color:var(--navy)}
+.entry-period{font-size:calc(13px*var(--f));font-weight:600;color:var(--muted);white-space:nowrap;letter-spacing:.3px}
+.entry ul{margin-top:calc(8px*var(--s));padding-left:18px}
+.entry li{font-size:calc(14.5px*var(--f));color:#3a4046;margin-bottom:calc(5px*var(--s));line-height:1.55}
+.entry li::marker{color:var(--navy-2)}
+/* ===== 侧边栏 ===== */
+.sidebar{
+  background:linear-gradient(180deg,var(--navy) 0%,var(--navy-2) 100%);
+  color:#eef1f7;padding:calc(34px*var(--s)) calc(30px*var(--s)) calc(40px*var(--s));
+}
+.side-title{
+  font-size:calc(13px*var(--f));font-weight:700;letter-spacing:2.5px;text-transform:uppercase;
+  color:#fff;padding-bottom:calc(10px*var(--s));margin-bottom:calc(18px*var(--s));position:relative;
+}
+.side-title::after{content:"";position:absolute;left:0;bottom:0;width:34px;height:2px;background:#fff}
+.detail-line{font-size:calc(14px*var(--f));line-height:1.6;color:#eef1f7;margin-bottom:calc(4px*var(--s))}
+.detail-label{font-size:calc(11px*var(--f));letter-spacing:1px;text-transform:uppercase;color:#9fb0cd;margin:calc(14px*var(--s)) 0 calc(4px*var(--s))}
+.skills{margin-top:calc(34px*var(--s))}
+.skill-item{
+  font-size:calc(14px*var(--f));color:#fff;padding:calc(7px*var(--s)) 0;border-bottom:1px solid rgba(255,255,255,.28);
+}
+.skill-item:last-child{border-bottom:none}
+/* ===== 新增版式：建筑经理 / 联邦政府职员 / 律师助理 / 邮政职员 ===== */
+.ncols{display:grid;grid-template-columns:minmax(0,0.58fr) minmax(0,1.42fr)}
+.nside{padding:calc(34px*var(--s)) calc(26px*var(--s));border-right:1px solid var(--hair);background:#fafbfc}
+.nbody{padding:calc(34px*var(--s)) calc(34px*var(--s))}
+.nsec{margin-top:calc(24px*var(--s))}
+.nsec:first-child{margin-top:0}
+.nh{
+  font-weight:700;letter-spacing:2px;text-transform:uppercase;
+  font-size:calc(12.5px*var(--f));color:#222;display:flex;align-items:center;gap:calc(10px*var(--s));margin-bottom:calc(12px*var(--s));
+}
+.nh::after{content:"";flex:1;height:1px;background:var(--hair)}
+.nside .nh{color:#222}
+.nside .nh::after{display:none}
+.nsummary{font-size:calc(13.5px*var(--f));color:#3a4046;line-height:1.5;text-align:justify}
+.nref{font-size:calc(13.5px*var(--f));color:#3a4046}
+.nentry{margin-bottom:calc(16px*var(--s))}
+.nentry:last-child{margin-bottom:0}
+.ne-top{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:2px 12px}
+.ne-left{display:flex;flex-wrap:wrap;align-items:baseline;gap:calc(4px*var(--s))}
+.ne-role{font-size:calc(15px*var(--f));font-weight:700;color:#222}
+.ne-org{font-size:calc(13.5px*var(--f));font-weight:400;color:#6f7680}
+.ne-period{font-size:calc(12px*var(--f));font-weight:600;color:#6f7680;white-space:nowrap}
+.ne-loc{font-size:calc(12px*var(--f));font-weight:600;color:#6f7680;margin-top:calc(2px*var(--s))}
+.ne-ul{margin-top:calc(6px*var(--s));padding-left:18px}
+.ne-ul li{font-size:calc(13px*var(--f));color:#3a4046;line-height:1.5;margin-bottom:calc(3px*var(--s))}
+.ne-ul li::marker{color:#222}
+.nd-line{font-size:calc(13px*var(--f));color:#3a4046;line-height:1.45;margin-bottom:calc(3px*var(--s))}
+.nd-label{font-size:calc(10.5px*var(--f));letter-spacing:1px;text-transform:uppercase;color:#6f7680;margin:calc(10px*var(--s)) 0 calc(3px*var(--s));font-weight:700}
+.nside-sec{margin-bottom:calc(22px*var(--s))}
+.nside-sec:last-child{margin-bottom:0}
+.ndots{padding-left:16px}
+.ndots li{font-size:calc(13px*var(--f));color:#3a4046;line-height:1.4;margin-bottom:calc(3px*var(--s))}
+.ndots li::marker{color:#222}
+.nround{list-style:none;padding-left:0}
+.nround li{font-size:calc(13px*var(--f));color:#3a4046;line-height:1.45;padding-left:calc(18px*var(--s));position:relative;margin-bottom:calc(7px*var(--s))}
+.nround li::before{content:"";position:absolute;left:0;top:.62em;width:7px;height:7px;border-radius:50%;background:#222}
+/* 顶部居中姓名（建筑经理 / 联邦） */
+.theader{text-align:center;padding:calc(26px*var(--s)) calc(30px*var(--s)) calc(14px*var(--s))}
+.th-name{font-family:"Libre Baskerville",Georgia,serif;font-size:calc(30px*var(--f));font-weight:700;letter-spacing:1px;color:#222;line-height:1.1}
+.th-line{display:flex;flex-wrap:wrap;justify-content:center;gap:calc(8px*var(--s));margin-top:calc(8px*var(--s));font-size:calc(12.5px*var(--f));color:#6f7680;font-weight:600}
+.th-role{text-transform:uppercase;color:#222}
+.th-sep{color:#c2c8cf}
+/* 律师助理：姓名置于右栏顶部 */
+.pl-header{padding-bottom:calc(14px*var(--s));margin-bottom:calc(20px*var(--s));border-bottom:2px solid #222}
+.pl-name{font-family:"Libre Baskerville",Georgia,serif;font-size:calc(28px*var(--f));font-weight:700;color:#222;line-height:1.1}
+.pl-role{font-size:calc(14px*var(--f));font-weight:700;color:#222;margin-top:calc(4px*var(--s));text-transform:uppercase}
+/* 邮政：单栏 + 顶部深色头栏 */
+.pbar{
+  background:linear-gradient(135deg,#0f2a44,#173a5e);color:#fff;display:flex;align-items:center;
+  gap:calc(18px*var(--s));padding:calc(22px*var(--s)) calc(30px*var(--s));
+}
+.pbar-av{width:calc(66px*var(--s));height:calc(66px*var(--s));border-radius:50%;background:rgba(255,255,255,.14);overflow:hidden;flex:none;display:flex;align-items:center;justify-content:center;color:#9fb0cd}
+.pbar-av img{width:100%;height:100%;object-fit:cover;display:block}
+.pbar-av .ph{display:flex;align-items:center;justify-content:center}
+.pbar-id{flex:1}
+.pbar-name{font-family:"Libre Baskerville",Georgia,serif;font-size:calc(27px*var(--f));font-weight:700;color:#fff;line-height:1.1}
+.pbar-role{font-size:calc(12.5px*var(--f));font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:#9fb6d8;margin-top:calc(4px*var(--s))}
+.pbar-con{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:calc(6px*var(--s)) calc(16px*var(--s));max-width:52%}
+.pbar-con span{font-size:calc(12.5px*var(--f));color:#cdd9ea}
+.pbody{padding:calc(30px*var(--s)) calc(30px*var(--s))}
+/* ===== 新增版式二：城市经理 / 电气工程师 / 人力资源 / 项目 / 研发 / 系统 / 通用求职 ===== */
+/* 反向双栏：主栏在左、侧栏在右 */
+.ncols.rev{grid-template-columns:minmax(0,1.42fr) minmax(0,0.58fr)}
+.ncols.rev .nside{border-right:none;border-left:1px solid var(--hair)}
+/* 通用头像标题头（城市/人力/研发共用） */
+.ah-head{display:flex;align-items:center;gap:calc(16px*var(--s));padding:calc(26px*var(--s)) calc(30px*var(--s)) calc(14px*var(--s))}
+.ah-av{width:calc(74px*var(--s));height:calc(74px*var(--s));border-radius:50%;background:#eef1f6;overflow:hidden;flex:none;display:flex;align-items:center;justify-content:center;color:#6f7680}
+.ah-av img{width:100%;height:100%;object-fit:cover;display:block}
+.ah-av .ph{display:flex;align-items:center;justify-content:center}
+.ah-id{flex:1}
+.ah-name{font-family:"Libre Baskerville",Georgia,serif;font-size:calc(29px*var(--f));font-weight:700;color:#222;line-height:1.1}
+.ah-role{font-size:calc(13.5px*var(--f));font-weight:700;color:#6f7680;margin-top:calc(4px*var(--s));letter-spacing:1px}
+.ah-con{font-size:calc(12.5px*var(--f));color:#6f7680;text-align:right;line-height:1.5}
+/* 城市经理：技能红色下划线 */
+.skill-red{list-style:none;padding-left:0}
+.skill-red li{font-size:calc(13px*var(--f));color:#3a4046;line-height:1.45;margin-bottom:calc(8px*var(--s));padding-bottom:calc(4px*var(--s));border-bottom:2px solid #c9402f}
+/* 人力资源：技能/语言蓝色分隔线 */
+.skill-blue{list-style:none;padding-left:0}
+.skill-blue li{font-size:calc(13px*var(--f));color:#3a4046;line-height:1.45;margin-bottom:calc(9px*var(--s));padding-bottom:calc(6px*var(--s));border-bottom:1px solid #3a6ea5}
+/* 系统工程师：技能评分 X/5 与语言熟练度 */
+.skill-rate{display:flex;justify-content:space-between;align-items:baseline;font-size:calc(13px*var(--f));color:#3a4046;margin-bottom:calc(6px*var(--s))}
+.skill-rate .r{font-weight:700;color:#222;white-space:nowrap}
+.lang-prof{display:flex;justify-content:space-between;align-items:baseline;font-size:calc(13px*var(--f));color:#3a4046;margin-bottom:calc(6px*var(--s))}
+.lang-prof .p{color:#6f7680;font-style:italic}
+/* 电气工程师：黄色头栏 + 单栏 */
+.el-header{background:#e8b93a;color:#1d2226;display:flex;align-items:center;gap:calc(20px*var(--s));padding:calc(24px*var(--s)) calc(34px*var(--s))}
+.el-av{width:calc(84px*var(--s));height:calc(84px*var(--s));border-radius:50%;background:rgba(255,255,255,.55);overflow:hidden;flex:none;display:flex;align-items:center;justify-content:center;color:#6f7680}
+.el-av img{width:100%;height:100%;object-fit:cover;display:block}
+.el-av .ph{display:flex;align-items:center;justify-content:center}
+.el-name{font-family:"Libre Baskerville",Georgia,serif;font-size:calc(34px*var(--f));font-weight:700;color:#1d2226;line-height:1.05;letter-spacing:2px;text-transform:uppercase}
+.el-role{font-size:calc(14px*var(--f));font-weight:700;color:#1d2226;letter-spacing:2px;text-transform:uppercase;margin-top:calc(6px*var(--s))}
+.el-body{padding:calc(30px*var(--s)) calc(34px*var(--s))}
+.el-sec{margin-top:calc(22px*var(--s))}
+.el-sec:first-child{margin-top:0}
+.el-line{font-size:calc(13.5px*var(--f));color:#3a4046;line-height:1.5;margin-bottom:calc(4px*var(--s))}
+/* 系统工程师：左右双栏 */
+.sy-cols{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,0.9fr)}
+.sy-left{padding:calc(26px*var(--s)) calc(28px*var(--s))}
+.sy-right{padding:calc(26px*var(--s)) calc(28px*var(--s));border-left:1px solid var(--hair)}
+.sy-id{margin-bottom:calc(20px*var(--s))}
+.sy-av{width:calc(84px*var(--s));height:calc(84px*var(--s));border-radius:50%;background:#eef1f6;overflow:hidden;display:flex;align-items:center;justify-content:center;color:#6f7680;margin-bottom:calc(12px*var(--s))}
+.sy-av img{width:100%;height:100%;object-fit:cover;display:block}
+.sy-av .ph{display:flex;align-items:center;justify-content:center}
+.sy-name{font-family:"Libre Baskerville",Georgia,serif;font-size:calc(24px*var(--f));font-weight:700;color:#222;line-height:1.15}
+.sy-role{font-size:calc(12.5px*var(--f));font-weight:700;color:#6f7680;letter-spacing:1px;margin:calc(4px*var(--s)) 0}
+.sy-con{font-size:calc(12px*var(--f));color:#6f7680;line-height:1.5}
+/* 通用求职模板：顶部姓名头 */
+.t1-head{padding:calc(22px*var(--s)) calc(30px*var(--s)) calc(12px*var(--s));border-bottom:2px solid #222}
+.t1-name{font-family:"Libre Baskerville",Georgia,serif;font-size:calc(30px*var(--f));font-weight:700;color:#222;line-height:1.1}
+.t1-role{font-size:calc(14px*var(--f));font-weight:700;color:#222;margin-top:calc(4px*var(--s))}
+.t1-con{font-size:calc(12.5px*var(--f));color:#6f7680;margin-top:calc(6px*var(--s))}
+/* ===== 工具栏 ===== */
+.toolbar{
+  position:fixed;right:16px;bottom:16px;display:flex;flex-direction:column;gap:8px;z-index:50;
+}
+.tbtn{
+  border:none;cursor:pointer;border-radius:50%;width:50px;height:50px;display:flex;align-items:center;justify-content:center;
+  background:var(--navy);color:#fff;box-shadow:0 6px 18px rgba(20,35,70,.3);transition:transform .15s ease, background .15s ease;
+}
+.tbtn:hover{transform:translateY(-2px);background:var(--navy-2)}
+.tbtn svg{width:22px;height:22px}
+.tbtn.ghost{background:#fff;color:var(--navy);border:1px solid var(--hair)}
+/* ===== 编辑面板 ===== */
+.drawer{
+  position:fixed;top:0;right:0;bottom:0;width:min(420px,100vw);background:#fff;z-index:60;
+  box-shadow:-10px 0 40px rgba(20,35,70,.2);transform:translateX(105%);transition:transform .28s ease;
+  display:flex;flex-direction:column;
+}
+.drawer.open{transform:translateX(0)}
+.drawer-head{background:var(--navy);color:#fff;padding:16px 20px}
+.drawer-head h2{font-size:17px;font-weight:700}
+.drawer-head p{font-size:12.5px;color:#b9c6de;margin-top:3px;line-height:1.5}
+.drawer-body{flex:1;overflow:auto;padding:18px 20px 30px}
+.field{margin-bottom:16px}
+.field label{display:block;font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--navy);margin-bottom:6px}
+.field small{display:block;font-size:11.5px;color:var(--muted);margin-top:5px;line-height:1.4}
+.sec-row{margin-bottom:8px}
+.chk{display:flex;align-items:center;gap:8px;font-size:13.5px;color:var(--ink);cursor:pointer}
+.chk input{width:16px;height:16px;accent-color:var(--navy)}
+input[type=text],input[type=password],textarea{
+  width:100%;border:1px solid var(--line);border-radius:6px;padding:8px 10px;font-size:16px;font-family:inherit;color:var(--ink);background:#fcfdfe;
+}
+textarea{resize:vertical;min-height:74px;line-height:1.5}
+input:focus,textarea:focus{outline:none;border-color:var(--navy);box-shadow:0 0 0 3px rgba(22,41,77,.12)}
+.drawer-foot{border-top:1px solid var(--hair);padding:14px 20px;display:flex;gap:10px;background:#fafbfc}
+.dbtn{
+  flex:1;border:none;cursor:pointer;border-radius:8px;padding:11px;font-size:14px;font-weight:700;font-family:inherit;
+}
+.dbtn.primary{background:var(--navy);color:#fff}
+.dbtn.primary:hover{background:var(--navy-2)}
+.dbtn.ghost{background:#fff;color:var(--navy);border:1px solid var(--line)}
+.overlay{position:fixed;inset:0;background:rgba(15,25,50,.35);opacity:0;pointer-events:none;transition:opacity .25s ease;z-index:55}
+.overlay.show{opacity:1;pointer-events:auto}
+.toast{
+  position:fixed;left:50%;bottom:26px;transform:translateX(-50%) translateY(20px);
+  background:var(--navy);color:#fff;padding:11px 20px;border-radius:30px;font-size:14px;font-weight:600;
+  opacity:0;pointer-events:none;transition:.25s ease;z-index:80;box-shadow:0 8px 24px rgba(20,35,70,.3);
+}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+/* ===== 桌面双栏 ===== */
+@media (min-width:720px){
+  .page{border-radius:8px}
+  .page.tpl-civil{grid-template-columns:1.62fr 1fr}   /* 仅双栏模板左右分栏 */
+  .resume-frame .page{width:794px}   /* = A4 打印宽度，保证屏幕测量与打印一致 */
+  .main{padding:calc(40px*var(--s)) calc(38px*var(--s))}
+  .sidebar{padding:calc(40px*var(--s)) calc(32px*var(--s))}
+}
+@media (max-width:720px){
+  body{padding:0;background:#fff}
+  .page{box-shadow:none;border-radius:0}
+  .head h1{font-size:calc(28px*var(--f))}
+  .avatar{width:calc(76px*var(--s));height:calc(76px*var(--s))}
+  /* 新版式双栏在手机端堆叠为单栏 */
+  .ncols{grid-template-columns:1fr}
+  .nside{border-right:none;border-bottom:1px solid var(--hair)}
+  .ncols.rev .nside{border-left:none}
+  .sy-cols{grid-template-columns:1fr}
+  .sy-right{border-left:none;border-top:1px solid var(--hair)}
+  .pbar{flex-wrap:wrap}
+  .pbar-con{justify-content:flex-start;max-width:100%;width:100%}
+}
+/* ===== 工作台布局（顶栏 + 左模板 / 中预览 / 右上传播放） ===== */
+.appbar{
+  position:sticky;top:0;z-index:40;height:58px;display:flex;align-items:center;justify-content:space-between;
+  padding:0 18px;background:var(--navy);color:#fff;box-shadow:0 2px 14px rgba(20,35,70,.22);
+}
+.brand{font-family:"Libre Baskerville",Georgia,serif;font-weight:700;font-size:19px;letter-spacing:.5px;display:flex;align-items:center;gap:10px}
+.brand svg{width:21px;height:21px;color:#cfd9ee}
+.app-actions{display:flex;gap:10px}
+.abtn{
+  border:1px solid rgba(255,255,255,.35);background:transparent;color:#fff;border-radius:8px;
+  padding:8px 14px;font-size:13.5px;font-weight:600;cursor:pointer;font-family:inherit;transition:.15s;
+}
+.abtn:hover{background:rgba(255,255,255,.14)}
+.abtn.solid{background:#fff;color:var(--navy);border-color:#fff}
+.app{display:grid;grid-template-columns:250px minmax(0,1fr) 320px;height:calc(100vh - 58px);overflow:hidden}
+.panel{overflow:auto;background:#fff}
+.panel-tpl{border-right:1px solid var(--hair);padding:16px 14px}
+.panel-upload{border-left:1px solid var(--hair);padding:16px 14px;background:#fafbfc}
+.panel-head{font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--navy);margin-bottom:12px}
+.tpl-list{display:flex;flex-direction:column;gap:10px}
+.tpl-card{border:2px solid var(--hair);border-radius:10px;overflow:hidden;cursor:pointer;background:#fff;padding:0;text-align:left;transition:.15s}
+.tpl-card:hover{border-color:var(--navy-2)}
+.tpl-card.sel{border-color:var(--navy);box-shadow:0 0 0 3px rgba(22,41,77,.15)}
+.tpl-thumb{height:118px;background:linear-gradient(135deg,#eef1f6 55%,var(--navy) 55%);position:relative}
+.tpl-thumb .name{position:absolute;left:8px;top:8px;font-size:11px;color:var(--navy);background:#fff;padding:2px 7px;border-radius:4px;font-weight:700}
+.tpl-meta{padding:9px 11px}
+.tpl-meta .t{font-size:13.5px;font-weight:700;color:var(--ink)}
+.tpl-meta .s{font-size:11.5px;color:var(--muted);margin-top:2px}
+.tpl-note{font-size:11.5px;color:var(--muted);line-height:1.55;margin-top:14px;padding-top:12px;border-top:1px solid var(--hair)}
+.stage{overflow:auto;background:var(--bg);display:flex;justify-content:center;align-items:flex-start;padding:22px}
+.resume-frame{background:#fff;border-radius:8px;box-shadow:0 10px 40px rgba(20,35,70,.14);max-width:100%;overflow:hidden}
+.resume-frame .page{box-shadow:none;border-radius:0;margin:0;max-width:100%}
+.dropbox{
+  width:100%;border:2px dashed var(--line);border-radius:12px;background:#fff;padding:22px 14px;cursor:pointer;
+  color:var(--navy);font-weight:700;font-size:14.5px;display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center;transition:.15s;margin-bottom:12px;
+}
+.dropbox:hover,.dropbox.over{border-color:var(--navy);background:#eef2f9}
+.dropbox svg{width:30px;height:30px;color:var(--navy-2)}
+.dropbox small{font-weight:400;font-size:12px;color:var(--muted);line-height:1.4}
+.resume-imgs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+.rimg{width:62px;height:62px;border-radius:8px;object-fit:cover;cursor:pointer;border:2px solid var(--hair);transition:.15s;background:#eef1f6}
+.rimg:hover{border-color:var(--navy)}
+.panel-actions{display:flex;gap:8px;margin-top:4px}
+.panel-actions .abtn{color:var(--navy);border:1px solid var(--line);flex:1;background:#fff}
+.panel-actions .abtn:hover{background:#eef2f9}
+.api-box{background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px;margin-bottom:12px}
+.api-box .field{margin-bottom:11px}
+.api-row{display:flex;align-items:center;gap:10px;margin-top:2px}
+.api-row .dbtn{flex:0 0 auto;padding:8px 14px;border-radius:8px}
+.api-status{font-size:12px;color:var(--muted);line-height:1.3}
+.api-status.kind0{color:var(--navy-2)}
+.api-status.kind1{color:#c0392b}
+.api-status.kind2{color:#1e7d43}
+@media (max-width:1080px){
+  .app{grid-template-columns:210px minmax(0,1fr)}
+  .panel-upload{grid-column:1 / -1;border-left:none;border-top:1px solid var(--hair)}
+}
+@media (max-width:760px){
+  .app{display:flex;flex-direction:column;height:auto;overflow:visible}
+  .panel-tpl{order:3;border-right:none;border-top:1px solid var(--hair)}
+  .panel-upload{order:1;border-left:none;border-bottom:1px solid var(--hair)}
+  .stage{order:2;padding:14px}
+  .appbar{height:auto;padding:10px 12px;gap:8px;flex-wrap:wrap}
+}
+/* ===== 上传 / 处理中 / 选头像 / 模型设置 ===== */
+input[type=file]{display:none}
+.busy{position:fixed;inset:0;background:rgba(15,25,50,.5);z-index:90;display:none;align-items:center;justify-content:center}
+.busy.show{display:flex}
+.busy-box{background:#fff;border-radius:12px;padding:26px 36px;display:flex;flex-direction:column;align-items:center;gap:14px;box-shadow:0 18px 50px rgba(20,35,70,.3);min-width:230px;text-align:center}
+.spinner{width:34px;height:34px;border:3px solid var(--hair);border-top-color:var(--navy);border-radius:50%;animation:spin .8s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.busy-msg{font-size:14px;color:var(--ink);font-weight:600}
+.modal{position:fixed;inset:0;background:rgba(15,25,50,.45);z-index:70;display:none;align-items:center;justify-content:center;padding:16px}
+.modal.show{display:flex}
+.modal-card{background:#fff;border-radius:14px;max-width:580px;width:100%;max-height:88vh;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 20px 60px rgba(20,35,70,.35)}
+.modal-head{background:var(--navy);color:#fff;padding:15px 20px}
+.modal-head h3{font-size:16px;font-weight:700}
+.modal-head p{font-size:12.5px;color:#b9c6de;margin-top:3px}
+.modal-body{padding:18px 20px;overflow:auto}
+.modal-foot{border-top:1px solid var(--hair);padding:12px 20px;display:flex;gap:10px;justify-content:flex-end;background:#fafbfc}
+.photo-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:12px}
+.photo-opt{border:2px solid var(--hair);border-radius:10px;overflow:hidden;cursor:pointer;position:relative;background:#fff;padding:0;text-align:left;transition:border-color .15s}
+.photo-opt:hover{border-color:var(--navy-2)}
+.photo-opt img{width:100%;height:140px;object-fit:cover;display:block;background:#f2f4f8}
+.photo-opt .tag{position:absolute;left:0;bottom:0;right:0;background:rgba(20,35,70,.78);color:#fff;font-size:11px;padding:3px 6px}
+.photo-opt.sel{border-color:var(--navy);box-shadow:0 0 0 3px rgba(22,41,77,.15)}
+.raw-text{width:100%;min-height:220px;border:1px solid var(--line);border-radius:8px;padding:10px;font-size:16px;font-family:inherit;resize:vertical;line-height:1.5;background:#fcfdfe}
+details.settings{border:1px solid var(--line);border-radius:8px;margin-bottom:18px;overflow:hidden;background:#fff}
+details.settings summary{padding:11px 13px;font-size:13.5px;font-weight:700;color:var(--navy);cursor:pointer;list-style:none;display:flex;align-items:center;gap:10px;background:#f7f9fc}
+details.settings summary::-webkit-details-marker{display:none}
+details.settings summary::before{content:"";width:8px;height:8px;border-right:2px solid var(--navy);border-bottom:2px solid var(--navy);transform:rotate(45deg);transition:transform .2s;flex:none}
+details.settings[open] summary::before{transform:rotate(225deg)}
+details.settings .inner{padding:12px 13px;border-top:1px solid var(--hair)}
+.setting-note{font-size:11.5px;color:var(--muted);line-height:1.55;margin-top:8px}
+.upload-bar{display:flex;gap:10px;margin-bottom:22px}
+.upload-btn{flex:1;border:2px dashed var(--line);border-radius:10px;padding:16px 12px;background:#f7f9fc;cursor:pointer;color:var(--navy);font-weight:700;font-size:14.5px;display:flex;align-items:center;justify-content:center;gap:9px;transition:.15s}
+.upload-btn:hover{border-color:var(--navy);background:#eef2f9}
+.upload-btn svg{width:21px;height:21px}
+/* ===== 打印 ===== */
+@page{size:A4;margin:0}
+@media print{
+  body{background:#fff;padding:0}
+  .appbar,.panel,.toolbar,.drawer,.overlay{display:none !important}
+  .app{display:block;height:auto;overflow:visible}
+  .stage{display:block;padding:0;overflow:visible;background:#fff}
+  .resume-frame{box-shadow:none;border-radius:0}
+  .page{box-shadow:none;border-radius:0;max-width:100%;width:210mm;min-height:297mm}
+  .sec{margin-top:18px}
+  .entry{margin-bottom:13px}
+  .main,.sidebar{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+</style>
+<!-- 上传简历解析依赖（纯前端，本地/在线均可） -->
+<script src="lib/pdf.min.js"></script>
+<script src="lib/mammoth.browser.min.js"></script>
+</head>
+<body>
+
+
+
+<header class="appbar">
+  <div class="brand">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 13h6M9 17h6"/></svg>
+    简历工作台
+  </div>
+  <div class="app-actions">
+    <button class="abtn" id="btnEditTop" type="button">编辑内容</button>
+    <button class="abtn solid" id="btnPrintTop" type="button">打印 / 导出 PDF</button>
+  </div>
+</header>
+<div class="app">
+  <aside class="panel panel-tpl">
+    <div class="panel-head">模板选择</div>
+    <div class="tpl-list" id="tplList"></div>
+    <p class="tpl-note">选择版式后，在右侧上传简历与照片，即可自动填充。已填写内容保存在本浏览器。</p>
+  </aside>
+  <main class="stage">
+    <div class="resume-frame">
+<!-- ============================================================
+     ② 简历页面（内容由上面 JS 自动填充，一般无需手动改此处结构）
+     ============================================================ -->
+<div class="page" id="page"></div>
+    </div><!-- /resume-frame -->
+  </main><!-- /stage -->
+
+  <aside class="panel panel-upload">
+    <div class="panel-head">上传与解析</div>
+    <button class="dropbox" id="dropResume" type="button">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14.9A7 7 0 1 1 15.7 8h1.8a4.5 4.5 0 0 1 2.5 8.2"/><path d="M12 12v9"/><path d="m16 16-4-4-4 4"/></svg>
+      <span>上传简历（PDF / Word）</span>
+      <small>点击或拖入文件，自动识别并填充到模板</small>
+    </button>
+    <div class="resume-imgs" id="resumeImgs"></div>
+    <button class="dropbox" id="dropPhoto" type="button">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+      <span>上传照片</span>
+      <small>作为简历头像（jpg / png）</small>
+    </button>
+
+    <div class="api-box">
+      <div class="panel-head" style="margin-top:4px">模型 API · 自动填充分栏</div>
+      <div class="field"><label>接口地址 Base URL</label><input type="text" id="cfgBase" placeholder="https://ark.cn-beijing.volces.com/api/v3"></div>
+      <div class="field"><label>API Key</label><input type="password" id="cfgKey" placeholder="sk-..."></div>
+      <div class="field"><label>模型名</label><input type="text" id="cfgModel" placeholder="如 doubao-seed-1-6-250615 / deepseek-chat"></div>
+      <div class="api-row">
+        <button class="dbtn ghost" id="btnTestApi" type="button">测试连接</button>
+        <span class="api-status" id="apiStatus"></span>
+      </div>
+      <p class="setting-note">任意 OpenAI 兼容接口可用（火山方舟 / DeepSeek / OpenAI / 本地 Ollama）。Key 仅存本浏览器。填好后重新上传简历，即可自动填入各栏目。若接口不支持浏览器跨域，请用本地服务打开本页或改用本地 Ollama。</p>
+    </div>
+
+    <div class="panel-actions">
+      <button class="abtn" id="btnEditSide" type="button">编辑内容</button>
+      <button class="abtn" id="btnPrintSide" type="button">打印 / PDF</button>
+    </div>
+  </aside>
+</div><!-- /app -->
+
+<!-- ============================================================
+     ③ 编辑面板（浏览器内直接替换内容）
+     ============================================================ -->
+<div class="overlay" id="overlay"></div>
+<div class="drawer" id="drawer">
+  <div class="drawer-head">
+    <h2>编辑简历内容</h2>
+    <p>修改后点「保存」，内容会立即更新并保存在本浏览器中，可随时再改或打印导出。</p>
+  </div>
+  <div class="drawer-body">
+    <div class="upload-bar">
+      <button class="upload-btn" id="uploadBtn" type="button">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14.9A7 7 0 1 1 15.7 8h1.8a4.5 4.5 0 0 1 2.5 8.2"/><path d="M12 12v9"/><path d="m16 16-4-4-4 4"/></svg>
+        上传简历自动填充（PDF / Word）
+      </button>
+    </div>
+    <div class="field"><label>姓名</label><input type="text" id="edName"></div>
+    <div class="field"><label>职业头衔</label><input type="text" id="edRole"></div>
+    <div class="field"><label>头像（图片路径 / URL）</label><input type="text" id="edAvatar" placeholder="留空显示占位图">
+      <small>可填本地图片路径（如 C:\users\...\photo.jpg）或网络 URL。</small></div>
+    <div class="field"><label>个人简介 Profile</label><textarea id="edSummary"></textarea></div>
+
+    <div class="field"><label>工作经历 Employment History</label><textarea id="edEmployment" style="min-height:180px"></textarea>
+      <small>每条经历用空行隔开。首行格式：岗位 | 公司 | 地点 | 时间；下方以「- 」开头的行是工作要点。</small></div>
+
+    <div class="field"><label>教育背景 Education</label><textarea id="edEducation" style="min-height:110px"></textarea>
+      <small>格式同上：首行 学位 | 学校 | 地点 | 时间，下方「- 」开头为成就要点。</small></div>
+
+    <div class="field"><label>联系地址（每行一行）</label><textarea id="edAddress" style="min-height:64px"></textarea></div>
+    <div class="field"><label>电话</label><input type="text" id="edPhone"></div>
+    <div class="field"><label>邮箱</label><input type="text" id="edEmail"></div>
+    <div class="field"><label>技能（每行一项）</label><textarea id="edSkills" style="min-height:110px"></textarea></div>
+    <div class="field"><label>语言 Languages（每行一项）</label><textarea id="edLanguages" style="min-height:64px"></textarea>
+      <small>「联邦政府职员」版式左侧会单独显示 Languages 一栏。</small></div>
+    <div class="field"><label id="lblInternships">实习经历 Internships</label><textarea id="edInternships" style="min-height:90px"></textarea>
+      <small>格式同工作经历：首行 岗位 | 公司 | 地点 | 时间，下方「- 」开头为要点。标题可在下方「栏目设置」自定义（如 Projects）。</small></div>
+
+    <div class="field" style="border-top:1px solid var(--hair);padding-top:14px">
+      <label>栏目设置</label>
+      <div class="sec-row"><label class="chk"><input type="checkbox" id="secAddress"> 显示联系地址 Address</label></div>
+      <div class="sec-row"><label class="chk"><input type="checkbox" id="secSkills"> 显示技能 Skills</label></div>
+      <div class="sec-row"><label class="chk"><input type="checkbox" id="secLanguages"> 显示语言 Languages</label></div>
+      <div class="sec-row"><label class="chk"><input type="checkbox" id="secReferences"> 显示 References 推荐</label></div>
+      <div class="sec-row"><label class="chk"><input type="checkbox" id="secExtra"> 显示额外栏目</label></div>
+      <div class="field"><label>额外栏目标题（可改为 Projects 等）</label><input type="text" id="secExtraTitle" placeholder="Internships"></div>
+      <small>点「保存」生效。额外栏目内容填在上方「实习/项目经历」栏，标题可自定义。</small>
+    </div>
+  </div>
+  <div class="drawer-foot">
+    <button class="dbtn ghost" id="btnReset" type="button">恢复模板</button>
+    <button class="dbtn primary" id="btnSave" type="button">保存</button>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<!-- 隐藏文件输入 -->
+<input type="file" id="resumeFile" accept=".pdf,.doc,.docx">
+<input type="file" id="avatarFile" accept="image/*">
+
+<!-- 处理中遮罩 -->
+<div class="busy" id="busy"><div class="busy-box"><div class="spinner"></div><div class="busy-msg" id="busyMsg">处理中…</div></div></div>
+
+<!-- 选头像弹窗 -->
+<div class="modal" id="photoModal">
+  <div class="modal-card">
+    <div class="modal-head"><h3>从上传简历中选择头像</h3><p>选择一张作为模板头像，或手动上传。</p></div>
+    <div class="modal-body"><div class="photo-grid" id="photoGrid"></div></div>
+    <div class="modal-foot">
+      <button class="dbtn ghost" id="photoNone" type="button">不使用照片</button>
+      <button class="dbtn ghost" id="photoUpload" type="button">手动上传头像</button>
+      <button class="dbtn primary" id="photoConfirm" type="button" disabled>使用所选</button>
+    </div>
+  </div>
+</div>
+
+<!-- 解析文本参考弹窗 -->
+<div class="modal" id="rawModal">
+  <div class="modal-card">
+    <div class="modal-head"><h3>未能自动填入栏目</h3><p>请在右侧「模型 API」填写接口地址 / Key / 模型名后点「重新识别」；也可复制下方文字到「编辑内容」手动整理。</p></div>
+    <div class="modal-body"><textarea class="raw-text" id="rawText" readonly></textarea></div>
+    <div class="modal-foot">
+      <button class="dbtn ghost" id="rawClose" type="button">关闭</button>
+      <button class="dbtn primary" id="rawRetry" type="button">重新识别</button>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     ① 内容配置区（唯一数据源）
+     想替换简历内容：直接修改下面 RESUME_DATA 对象的对应字段即可。
+     模块结构：
+       profile    → 头像(avatar 填图片路径/URL，留空则显示占位)、姓名、职业、个人简介
+       employment → 工作经历：数组，每一项一条经历（role岗位/company公司/location地点/period时间/bullets要点列表）
+       education  → 教育背景：同上结构
+       details    → 右侧联系信息：address 为多行地址数组，phone 电话，email 邮箱
+       skills     → 右侧技能：字符串数组
+     也可以用右下角「编辑」按钮在浏览器里直接改，改完点「保存」。
+     ============================================================ -->
+<script>
+const DEFAULT_DATA = {
+  profile: {
+    avatar: "",                       // 头像图片路径或URL，留空显示灰色占位
+    name: "Neil Burrows",
+    role: "CIVIL ENGINEER",
+    summary: "Dedicated and experienced Civil Engineer with extensive knowledge of engineering principles, theories, specifications, and standards. Bringing leadership, drive, and over seven years of experience to the table. Proven track record of finishing complex projects under budget and ahead of schedule. Substantial knowledge and experience with environmentally sustainable construction."
+  },
+  employment: [
+    {
+      role: "Civil Engineer", company: "Hexagon Corporation", location: "Hartford",
+      period: "SEPTEMBER 2014 – SEPTEMBER 2019",
+      bullets: [
+        "Carefully managed projects so that milestones were met during agreed time and within budget confines.",
+        "Attended meetings to discuss projects with clients, contractors, asset owners, and stockholders.",
+        "Created detailed plans and frequently monitored progress to assure project goals were met.",
+        "Ensured that building regulations were all met and provided thorough directions with any unusual or difficult engineering issue."
+      ]
+    },
+    {
+      role: "Civil Engineer", company: "Racon & Lewis Ltd", location: "Danbury",
+      period: "AUGUST 2012 – AUGUST 2014",
+      bullets: [
+        "Planned and directed the execution of various projects, keeping economical, administrative, and physical requirements in mind.",
+        "Trained incoming engineers to meet standards and protocol expectations.",
+        "Wrote daily reports for accountability and quality assurance.",
+        "Advised project managers on financial decisions regarding product costs."
+      ]
+    },
+    {
+      role: "Junior Civil Engineer", company: "Racon & Lewis Ltd", location: "Danbury",
+      period: "AUGUST 2009 – AUGUST 2012",
+      bullets: [
+        "Assisted senior engineers with any and all tasks related to ensuring project success.",
+        "Inspected all materials to ensure project specifications and quantities properly met.",
+        "Thoroughly inspected all major structures and supervised any revisions made.",
+        "Monitored construction and inspected installation of major systems.",
+        "Assisted with and independently produced many Engineer reports."
+      ]
+    }
+  ],
+  education: [
+    {
+      role: "Master of Civil Engineering", company: "New York University", location: "New York",
+      period: "JANUARY 2009 – JANUARY 2011",
+      bullets: ["Graduated with a 3.9 GPA."]
+    },
+    {
+      role: "Bachelor of Civil Engineering", company: "Manhattan College", location: "Riverdale",
+      period: "AUGUST 2005 – MAY 2009",
+      bullets: ["Graduated suma cum laude.", "President of the Engineer's Society."]
+    }
+  ],
+  details: {
+    address: ["130 Terry Boulevard", "Hartford, CT 06105", "United States"],
+    phone: "(203) 297-6342",
+    email: "neilburr_ws5@yahoo.com"
+  },
+  skills: [
+    "Analytical Thinking Skills",
+    "Principles and Practices of Engineering",
+    "Creative Problem Solving",
+    "Field Investigation Skills",
+    "Project Management"
+  ],
+  languages: [],
+  internships: []
+};
+
+// 读取本地保存的版本（编辑后自动持久化），无则用默认模板
+let RESUME_DATA = null;
+try{ const saved = localStorage.getItem('resume_public_data'); RESUME_DATA = saved ? JSON.parse(saved) : null; }catch(e){ RESUME_DATA = null; }
+if(!RESUME_DATA){ RESUME_DATA = JSON.parse(JSON.stringify(DEFAULT_DATA)); }
+
+/* 栏目配置：客户可决定显示哪些栏目、额外栏目标题 */
+const SECT_DEFAULTS = {
+  address: true,      // 显示联系地址
+  skills: true,       // 显示技能
+  languages: true,    // 显示语言
+  references: true,   // 显示 References 推荐
+  extra: { enabled: false, title: 'Internships' }  // 额外栏目（默认实习，可改为 Projects 等）
+};
+let SECT = SECT_DEFAULTS;
+function getSections(){
+  let s = SECT_DEFAULTS;
+  try{
+    const saved = JSON.parse(localStorage.getItem('resume_public_sections') || 'null');
+    if(saved && typeof saved === 'object'){
+      s = Object.assign({}, SECT_DEFAULTS, saved);
+      s.extra = Object.assign({ enabled: false, title: 'Internships' }, saved.extra || {});
+    }
+  }catch(e){}
+  return s;
+}
+function saveSections(){
+  const s = {
+    address: $('#secAddress').checked,
+    skills: $('#secSkills').checked,
+    languages: $('#secLanguages').checked,
+    references: $('#secReferences').checked,
+    extra: { enabled: $('#secExtra').checked, title: $('#secExtraTitle').value.trim() || 'Internships' }
+  };
+  try{ localStorage.setItem('resume_public_sections', JSON.stringify(s)); }catch(e){}
+  return s;
+}
+
+/* 模板列表（可扩展多套版式；选中后决定版式） */
+const TEMPLATES = [
+  { id: 'civil',        name: '土木工程师',   desc: '左主体 + 深蓝侧边栏', color: '#16294d' },
+  { id: 'construction', name: '建筑经理',     desc: '黑白双栏 · 顶部居中姓名', color: '#22262b' },
+  { id: 'federal',      name: '联邦政府职员', desc: '黑白双栏 · 左含语言/右含实习', color: '#3a3f46' },
+  { id: 'paralegal',    name: '律师助理',     desc: '双栏 · 技能圆点标记', color: '#5b4a3a' },
+  { id: 'postal',       name: '邮政职员',     desc: '单栏 · 顶部深色头栏', color: '#0f2a44' },
+  { id: 'city',         name: '城市经理',     desc: '双栏 · 主栏在左 / 技能红色下划线', color: '#b23a2f' },
+  { id: 'electrical',   name: '电气工程师',   desc: '单栏 · 顶部黄色头栏', color: '#d9a520' },
+  { id: 'hr',           name: '人力资源专员', desc: '双栏 · 技能蓝色分隔线', color: '#2f6da3' },
+  { id: 'project',      name: '项目工程师',   desc: '双栏 · 圆点技能 + 语言/实习', color: '#4a6a7a' },
+  { id: 'research',     name: '研发工程师',   desc: '双栏 · 左技能/语言', color: '#5a6a5a' },
+  { id: 'systems',      name: '系统工程师',   desc: '双栏 · 技能评分 X/5', color: '#3f5f8a' },
+  { id: 'resume1',      name: '通用求职模板', desc: '双栏 · 中英简历风格', color: '#6a5a3a' }
+];
+let CURRENT_TPL = 'civil';
+function renderTemplates(){
+  const list = document.getElementById('tplList'); if(!list) return; list.innerHTML = '';
+  TEMPLATES.forEach(function(t){
+    const b = document.createElement('button'); b.type = 'button';
+    b.className = 'tpl-card' + (t.id === CURRENT_TPL ? ' sel' : '');
+    b.innerHTML = '<div class="tpl-thumb" style="background:' + (t.color||'#16294d') + '"><span class="name">' + esc(t.name) + '</span></div>' +
+      '<div class="tpl-meta"><div class="t">' + esc(t.name) + '</div><div class="s">' + esc(t.desc) + '</div></div>';
+    b.addEventListener('click', function(){ CURRENT_TPL = t.id; renderTemplates(); render(); });
+    list.appendChild(b);
+  });
+}
+
+/* ===== 渲染 ===== */
+function esc(s){ return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+/* ===== 自动适配一页：内容超出一页 A4 时，按档缩小字号/行距与间距 ===== */
+const PAGE_H = 1122;   // A4 高度 @96dpi (297mm)
+function fitToPage(){
+  // 仅桌面/打印宽度下做适配（移动端让页面自然滚动）
+  if(window.innerWidth < 720) return;
+  const page = document.querySelector('.page');
+  if(!page) return;
+  let f = 1, s = 1;
+  const FMIN = 0.7, SMIN = 0.72;
+  page.style.setProperty('--f', f); page.style.setProperty('--s', s);
+  for(let i = 0; i < 40; i++){
+    const h = page.offsetHeight;
+    if(h <= PAGE_H) break;
+    if(f <= FMIN && s <= SMIN) break;
+    if(f > FMIN) f = Math.max(FMIN, +(f - 0.03).toFixed(3));
+    if(s > SMIN) s = Math.max(SMIN, +(s - 0.03).toFixed(3));
+    page.style.setProperty('--f', f); page.style.setProperty('--s', s);
+  }
+}
+
+const PH_SVG = '<svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-3.3 3.6-5.5 8-5.5s8 2.2 8 5.5"/></svg>';
+
+function render(){
+  SECT = getSections();
+  const page = document.getElementById('page');
+  if(!page) return;
+  page.className = 'page tpl-' + CURRENT_TPL;
+  page.innerHTML = tplHTML();
+  fitToPage();
+}
+
+/* 通用条目（供各版式复用） */
+function nentryHTML(e){
+  return '<div class="nentry">'+
+    '<div class="ne-top">'+
+      '<div class="ne-left"><span class="ne-role">'+esc(e.role)+'</span>'+(e.company?'<span class="ne-org">'+esc(e.company)+'</span>':'')+'</div>'+
+      (e.period?'<span class="ne-period">'+esc(e.period)+'</span>':'')+
+    '</div>'+
+    (e.location?'<div class="ne-loc">'+esc(e.location)+'</div>':'')+
+    '<ul class="ne-ul">'+ (e.bullets||[]).map(function(b){ return '<li>'+esc(b)+'</li>'; }).join('') +'</ul>'+
+  '</div>';
+}
+function nsec(title, inner){ return '<section class="nsec"><h2 class="nh">'+title+'</h2>'+inner+'</section>'; }
+
+function civilHTML(){
+  const d = RESUME_DATA, p = d.profile;
+  const av = p.avatar ? '<img src="'+esc(p.avatar)+'" alt="头像">' : '<div class="ph">'+PH_SVG+'</div>';
+  return '<div class="main">'+
+    '<header class="head"><div class="avatar">'+av+'</div><div><h1>'+esc(p.name)+'</h1><div class="role">'+esc(p.role)+'</div></div></header>'+
+    '<section class="sec"><h2 class="sec-title">Profile</h2><p class="summary">'+esc(p.summary)+'</p></section>'+
+    '<section class="sec"><h2 class="sec-title">Employment History</h2>'+d.employment.map(entryHTML).join('')+'</section>'+
+    '<section class="sec"><h2 class="sec-title">Education</h2>'+d.education.map(entryHTML).join('')+'</section>'+
+  '</div>'+
+  '<aside class="sidebar">'+
+    '<section><h2 class="side-title">Details</h2>'+
+      '<div class="detail-line">'+(SECT.address ? (d.details.address||[]).map(esc).join('<br>') : '')+'</div>'+
+      '<div class="detail-label">Phone</div><div class="detail-line">'+esc(d.details.phone||'—')+'</div>'+
+      '<div class="detail-label">Email</div><div class="detail-line">'+esc(d.details.email||'—')+'</div>'+
+    '</section>'+
+    '<section class="skills"><h2 class="side-title">Skills</h2>'+(d.skills||[]).map(function(s){return '<div class="skill-item">'+esc(s)+'</div>';}).join('')+'</section>'+
+  '</aside>';
+}
+
+function tplHTML(){
+  const d = RESUME_DATA, p = d.profile;
+  const name = esc(p.name), role = esc(p.role);
+  const addrLines = (SECT.address ? (d.details.address||[]) : []).map(esc);
+  const locLine = addrLines.join(', ');
+  const phone = esc(d.details.phone||''), email = esc(d.details.email||'');
+  const skills = SECT.skills ? (d.skills||[]) : [];
+  const languages = SECT.languages ? (d.languages||[]) : [];
+  const internships = d.internships||[];
+  const avImg = p.avatar ? '<img src="'+esc(p.avatar)+'" alt="头像">' : '<div class="ph">'+PH_SVG+'</div>';
+  const listOf = function(arr, round){ return '<ul class="'+(round?'nround':'ndots')+'">'+arr.map(function(s){return '<li>'+esc(s)+'</li>';}).join('')+'</ul>'; };
+  const detailsBlock = function(withLabels){
+    const out = [];
+    if(withLabels) out.push('<div class="nd-label">Address</div>');
+    addrLines.forEach(function(a){ out.push('<div class="nd-line">'+a+'</div>'); });
+    if(phone){ if(withLabels) out.push('<div class="nd-label">Phone</div>'); out.push('<div class="nd-line">'+phone+'</div>'); }
+    if(email){ if(withLabels) out.push('<div class="nd-label">Email</div>'); out.push('<div class="nd-line">'+email+'</div>'); }
+    return out.join('');
+  };
+
+  const profileSec = nsec('Profile', '<p class="nsummary">'+esc(p.summary)+'</p>');
+  const empSec = nsec('Employment History', d.employment.map(nentryHTML).join(''));
+  const eduSec = nsec('Education', d.education.map(nentryHTML).join(''));
+  const refSec = SECT.references ? nsec('References', '<p class="nref">References available upon request</p>') : '';
+  const internSec = (SECT.extra.enabled && internships.length) ? nsec(esc(SECT.extra.title || 'Internships'), internships.map(nentryHTML).join('')) : '';
+
+  if(CURRENT_TPL === 'civil') return civilHTML();
+
+  const theader = '<header class="theader"><h1 class="th-name">'+name+'</h1><div class="th-line">'+
+    '<span class="th-role">'+role+'</span>'+
+    (locLine?'<span class="th-sep">|</span><span class="th-loc">'+locLine+'</span>':'')+
+    (phone?'<span class="th-sep">|</span><span class="th-phone">'+phone+'</span>':'')+
+  '</div></header>';
+
+  const aside = function(mid){
+    return '<aside class="nside">'+
+      '<div class="nside-sec"><h2 class="nh">Details</h2>'+detailsBlock(mid)+'</div>'+
+      (skills.length?'<div class="nside-sec"><h2 class="nh">Skills</h2>'+listOf(skills, mid)+'</div>':'')+
+    '</aside>';
+  };
+
+  if(CURRENT_TPL === 'construction'){
+    return theader + '<div class="ncols">'+ aside(false) +
+      '<div class="nbody">'+profileSec+empSec+eduSec+refSec+'</div></div>';
+  }
+  if(CURRENT_TPL === 'federal'){
+    return theader + '<div class="ncols">'+
+      '<aside class="nside">'+
+        '<div class="nside-sec"><h2 class="nh">Details</h2>'+detailsBlock(false)+'</div>'+
+        (skills.length?'<div class="nside-sec"><h2 class="nh">Skills</h2>'+listOf(skills, false)+'</div>':'')+
+        (languages.length?'<div class="nside-sec"><h2 class="nh">Languages</h2>'+listOf(languages, false)+'</div>':'')+
+      '</aside>'+
+      '<div class="nbody">'+profileSec+empSec+eduSec+(internships.length?internSec:'')+refSec+'</div></div>';
+  }
+  if(CURRENT_TPL === 'paralegal'){
+    return '<div class="ncols">'+ aside(true) +
+      '<div class="nbody"><header class="pl-header"><h1 class="pl-name">'+name+'</h1><div class="pl-role">'+role+'</div></header>'+
+      profileSec+empSec+eduSec+refSec+'</div></div>';
+  }
+  if(CURRENT_TPL === 'postal'){
+    const con = [email, locLine, phone].filter(Boolean).map(function(x){ return '<span>'+x+'</span>'; }).join('');
+    return '<header class="pbar">'+
+        '<div class="pbar-av">'+avImg+'</div>'+
+        '<div class="pbar-id"><h1 class="pbar-name">'+name+'</h1><div class="pbar-role">'+role+'</div></div>'+
+        (con?'<div class="pbar-con">'+con+'</div>':'')+
+      '</header>'+
+      '<div class="pbody">'+profileSec+empSec+eduSec+'</div>';
+  }
+  if(CURRENT_TPL === 'city'){
+    return '<header class="ah-head">'+
+        '<div class="ah-av">'+avImg+'</div>'+
+        '<div class="ah-id"><h1 class="ah-name">'+name+'</h1><div class="ah-role">'+role+'</div></div>'+
+      '</header>'+
+      '<div class="ncols rev">'+
+        '<div class="nbody">'+profileSec+empSec+eduSec+refSec+'</div>'+
+        '<aside class="nside">'+
+          '<div class="nside-sec"><h2 class="nh">Details</h2>'+detailsBlock(false)+'</div>'+
+          (skills.length?'<div class="nside-sec"><h2 class="nh">Skills</h2><ul class="skill-red">'+skills.map(function(s){return '<li>'+esc(s)+'</li>';}).join('')+'</ul></div>':'')+
+        '</aside>'+
+      '</div>';
+  }
+  if(CURRENT_TPL === 'hr'){
+    const langList = languages.length ? '<div class="nside-sec"><h2 class="nh">Languages</h2><ul class="skill-blue">'+languages.map(function(s){return '<li>'+esc(s)+'</li>';}).join('')+'</ul></div>' : '';
+    return '<header class="ah-head">'+
+        '<div class="ah-av">'+avImg+'</div>'+
+        '<div class="ah-id"><h1 class="ah-name">'+name+'</h1><div class="ah-role">'+role+'</div></div>'+
+      '</header>'+
+      '<div class="ncols rev">'+
+        '<div class="nbody">'+profileSec+empSec+eduSec+'</div>'+
+        '<aside class="nside">'+
+          '<div class="nside-sec"><h2 class="nh">Details</h2>'+detailsBlock(false)+'</div>'+
+          (skills.length?'<div class="nside-sec"><h2 class="nh">Skills</h2><ul class="skill-blue">'+skills.map(function(s){return '<li>'+esc(s)+'</li>';}).join('')+'</ul></div>':'')+
+          langList+
+        '</aside>'+
+      '</div>';
+  }
+  if(CURRENT_TPL === 'electrical'){
+    const sk = skills.length ? '<section class="el-sec"><h2 class="nh">Skills</h2><ul class="ndots">'+skills.map(function(s){return '<li>'+esc(s)+'</li>';}).join('')+'</ul></section>' : '';
+    return '<header class="el-header">'+
+        '<div class="el-av">'+avImg+'</div>'+
+        '<div class="el-id"><h1 class="el-name">'+esc(p.name)+'</h1><div class="el-role">'+role+'</div></div>'+
+      '</header>'+
+      '<div class="el-body">'+
+        '<section class="el-sec"><h2 class="nh">Details</h2>'+
+          '<div class="el-line">'+addrLines.join(', ')+'</div>'+
+          (email?'<div class="el-line">'+email+'</div>':'')+
+          (phone?'<div class="el-line">'+phone+'</div>':'')+
+        '</section>'+
+        '<section class="el-sec"><h2 class="nh">Profile</h2><p class="nsummary">'+esc(p.summary)+'</p></section>'+
+        '<section class="el-sec"><h2 class="nh">Employment History</h2>'+d.employment.map(nentryHTML).join('')+'</section>'+
+        '<section class="el-sec"><h2 class="nh">Education</h2>'+d.education.map(nentryHTML).join('')+'</section>'+
+        sk+
+      '</div>';
+  }
+  if(CURRENT_TPL === 'project'){
+    return theader + '<div class="ncols">'+
+        '<aside class="nside">'+
+          '<div class="nside-sec"><h2 class="nh">Details</h2>'+detailsBlock(true)+'</div>'+
+          (skills.length?'<div class="nside-sec"><h2 class="nh">Skills</h2>'+listOf(skills, true)+'</div>':'')+
+          (languages.length?'<div class="nside-sec"><h2 class="nh">Languages</h2>'+listOf(languages, true)+'</div>':'')+
+        '</aside>'+
+        '<div class="nbody">'+profileSec+empSec+(internships.length?internSec:'')+eduSec+'</div></div>';
+  }
+  if(CURRENT_TPL === 'research'){
+    const con = (locLine ? locLine : '') + (phone ? '<br>'+phone : '') + (email ? ' · '+email : '');
+    return '<header class="ah-head">'+
+        '<div class="ah-av">'+avImg+'</div>'+
+        '<div class="ah-id"><h1 class="ah-name">'+name+'</h1><div class="ah-role">'+role+'</div></div>'+
+        (con?'<div class="ah-con">'+con+'</div>':'')+
+      '</header>'+
+      '<div class="ncols">'+
+        '<aside class="nside">'+
+          (skills.length?'<div class="nside-sec"><h2 class="nh">Skills</h2>'+listOf(skills, false)+'</div>':'')+
+          (languages.length?'<div class="nside-sec"><h2 class="nh">Languages</h2>'+listOf(languages, false)+'</div>':'')+
+        '</aside>'+
+        '<div class="nbody">'+profileSec+empSec+eduSec+'</div></div>';
+  }
+  if(CURRENT_TPL === 'systems'){
+    const rate = skills.map(function(s){ return '<div class="skill-rate"><span>'+esc(s)+'</span><span class="r">5/5</span></div>'; }).join('');
+    const lp = languages.map(function(s){ return '<div class="lang-prof"><span>'+esc(s)+'</span><span class="p">Native</span></div>'; }).join('');
+    const con = [email, phone, locLine].filter(Boolean).join('<br>');
+    return '<div class="sy-cols">'+
+        '<div class="sy-left">'+
+          '<div class="sy-id">'+
+            '<div class="sy-av">'+avImg+'</div>'+
+            '<h1 class="sy-name">'+name+'</h1>'+
+            '<div class="sy-role">'+role+'</div>'+
+            (con?'<div class="sy-con">'+con+'</div>':'')+
+          '</div>'+
+          '<section class="nsec"><h2 class="nh">Employment History</h2>'+d.employment.map(nentryHTML).join('')+'</section>'+
+          '<section class="nsec"><h2 class="nh">Education</h2>'+d.education.map(nentryHTML).join('')+'</section>'+
+        '</div>'+
+        '<div class="sy-right">'+
+          '<section class="nsec"><h2 class="nh">Profile</h2><p class="nsummary">'+esc(p.summary)+'</p></section>'+
+          (skills.length?'<section class="nsec"><h2 class="nh">Skills</h2>'+rate+'</section>':'')+
+          (languages.length?'<section class="nsec"><h2 class="nh">Languages</h2>'+lp+'</section>':'')+
+        '</div>'+
+      '</div>';
+  }
+  if(CURRENT_TPL === 'resume1'){
+    const con = [phone, email, locLine].filter(Boolean).join(' | ');
+    return '<header class="t1-head">'+
+        '<h1 class="t1-name">'+name+'</h1>'+
+        '<div class="t1-role">'+role+'</div>'+
+        (con?'<div class="t1-con">'+con+'</div>':'')+
+      '</header>'+
+      '<div class="ncols rev">'+
+        '<div class="nbody">'+
+          '<section class="nsec"><h2 class="nh">Education</h2>'+d.education.map(nentryHTML).join('')+'</section>'+
+          '<section class="nsec"><h2 class="nh">Work Experience</h2>'+d.employment.map(nentryHTML).join('')+'</section>'+
+          (internships.length?'<section class="nsec"><h2 class="nh">Internship Experience</h2>'+internships.map(nentryHTML).join('')+'</section>':'')+
+        '</div>'+
+        '<aside class="nside">'+
+          (skills.length?'<div class="nside-sec"><h2 class="nh">Skills & Certificates</h2><ul class="ndots">'+skills.map(function(s){return '<li>'+esc(s)+'</li>';}).join('')+'</ul></div>':'')+
+        '</aside>'+
+      '</div>';
+  }
+  return civilHTML();
+}
+function entryHTML(e){
+  return '<div class="entry">'+
+    '<div class="entry-top">'+
+      '<div><span class="entry-role">'+esc(e.role)+'</span>'+((e.company||e.location)?'<span class="entry-org">'+(e.company?' · '+esc(e.company):'')+'</span>':'')+'</div>'+
+      '<span class="entry-period">'+esc(e.period)+'</span>'+
+    '</div>'+
+    '<ul>'+ (e.bullets||[]).map(function(b){ return '<li>'+esc(b)+'</li>'; }).join('') +'</ul>'+
+  '</div>';
+}
+
+/* ===== 编辑面板 ===== */
+function openEditor(){
+  const d = RESUME_DATA;
+  $('#edName').value = d.profile.name;
+  $('#edRole').value = d.profile.role;
+  $('#edAvatar').value = d.profile.avatar || '';
+  $('#edSummary').value = d.profile.summary;
+  $('#edEmployment').value = entriesToText(d.employment);
+  $('#edEducation').value = entriesToText(d.education);
+  $('#edAddress').value = (d.details.address||[]).join('\n');
+  $('#edPhone').value = d.details.phone || '';
+  $('#edEmail').value = d.details.email || '';
+  $('#edSkills').value = (d.skills||[]).join('\n');
+  $('#edLanguages').value = (d.languages||[]).join('\n');
+  $('#edInternships').value = entriesToText(d.internships);
+  const S = getSections();
+  $('#secAddress').checked = S.address;
+  $('#secSkills').checked = S.skills;
+  $('#secLanguages').checked = S.languages;
+  $('#secReferences').checked = S.references;
+  $('#secExtra').checked = S.extra.enabled;
+  $('#secExtraTitle').value = S.extra.title;
+  const lb = document.getElementById('lblInternships'); if(lb){ lb.textContent = '实习/项目经历 ' + (S.extra.title || 'Internships'); }
+  $('#drawer').classList.add('open');
+  $('#overlay').classList.add('show');
+}
+function closeEditor(){ $('#drawer').classList.remove('open'); $('#overlay').classList.remove('show'); }
+function saveEditor(){
+  const d = RESUME_DATA;
+  d.profile.name = $('#edName').value.trim() || d.profile.name;
+  d.profile.role = $('#edRole').value.trim() || d.profile.role;
+  d.profile.avatar = $('#edAvatar').value.trim();
+  d.profile.summary = $('#edSummary').value.trim();
+  d.employment = textToEntries($('#edEmployment').value);
+  d.education = textToEntries($('#edEducation').value);
+  d.details.address = $('#edAddress').value.split(/\n+/).map(function(s){return s.trim();}).filter(Boolean);
+  d.details.phone = $('#edPhone').value.trim();
+  d.details.email = $('#edEmail').value.trim();
+  d.skills = $('#edSkills').value.split(/\n+/).map(function(s){return s.trim();}).filter(Boolean);
+  d.languages = $('#edLanguages').value.split(/\n+/).map(function(s){return s.trim();}).filter(Boolean);
+  d.internships = textToEntries($('#edInternships').value);
+  try{ localStorage.setItem('resume_public_data', JSON.stringify(d)); }catch(e){}
+  saveSections();
+  render(); closeEditor(); toast('已保存，当前内容已更新');
+}
+// 条目 ⇄ 文本：空行分隔条目；首行 "岗位 | 公司 | 地点 | 时间"；"- "开头为要点
+function entriesToText(arr){
+  return (arr||[]).map(function(e){
+    const head = [e.role||'', e.company||'', e.location||'', e.period||''].join(' | ');
+    const bullets = (e.bullets||[]).map(function(b){ return '- '+b; }).join('\n');
+    return bullets ? head+'\n'+bullets : head;
+  }).join('\n\n');
+}
+function textToEntries(txt){
+  return txt.split(/\n\s*\n/).map(function(block){
+    const lines = block.split('\n').map(function(s){return s.trim();}).filter(Boolean);
+    if(!lines.length) return null;
+    const head = lines[0].split('|').map(function(s){return s.trim();});
+    const bullets = lines.slice(1).filter(function(l){ return /^[-·•]/.test(l); }).map(function(l){ return l.replace(/^[-·•]\s*/,''); });
+    return { role:head[0]||'', company:head[1]||'', location:head[2]||'', period:head[3]||'', bullets:bullets };
+  }).filter(Boolean);
+}
+function resetData(){
+  RESUME_DATA = JSON.parse(JSON.stringify(DEFAULT_DATA));
+  try{ localStorage.removeItem('resume_public_data'); }catch(e){}
+  render(); closeEditor(); toast('已恢复为默认模板');
+}
+function doPrint(){ window.print(); }
+function $(id){ return document.getElementById(String(id).replace(/^#/, '')); }
+function toast(msg){ const t=$('toast'); t.textContent=msg; t.classList.add('show'); clearTimeout(t._t); t._t=setTimeout(function(){ t.classList.remove('show'); },1800); }
+
+/* ===== 上传简历 → 自动填充（纯前端） ===== */
+let pendingParse = null;   // {text, images}
+let photoSel = -1;
+
+function setBusy(msg){ $('#busyMsg').textContent = msg || '处理中…'; $('#busy').classList.add('show'); }
+function clearBusy(){ $('#busy').classList.remove('show'); }
+
+/* ---- 模型配置（OpenAI 兼容接口，存本地） ---- */
+function getLLM(){
+  try{ return JSON.parse(localStorage.getItem('resume_public_llm_cfg')) || {}; }catch(e){ return {}; }
+}
+function saveLLM(){
+  localStorage.setItem('resume_public_llm_cfg', JSON.stringify({
+    base_url: $('#cfgBase').value.trim(),
+    api_key: $('#cfgKey').value.trim(),
+    model: $('#cfgModel').value.trim()
+  }));
+}
+function initCfgUI(){
+  const cfg = getLLM();
+  $('#cfgBase').value = cfg.base_url || '';
+  $('#cfgKey').value = cfg.api_key || '';
+  $('#cfgModel').value = cfg.model || '';
+}
+function setStatus(txt, kind){ const s = $('#apiStatus'); if(!s) return; s.textContent = txt; s.className = 'api-status kind' + kind; }
+async function testAPI(){
+  const cfg = getLLM();
+  if(!cfg.base_url || !cfg.api_key || !cfg.model){ setStatus('请填全接口地址 / Key / 模型名', 1); return; }
+  setStatus('测试中…', 0);
+  try{
+    const url = (cfg.base_url || '').replace(/\/+$/, '') + '/chat/completions';
+    const res = await fetch(url, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + cfg.api_key },
+      body: JSON.stringify({ model: cfg.model, max_tokens: 1, messages: [{ role: 'user', content: 'hi' }] })
+    });
+    if(res.ok){ setStatus('连接成功', 2); toast('模型接口连接成功，可以上传简历自动填充了'); }
+    else{
+      let m = 'HTTP ' + res.status;
+      try{ const j = await res.json(); m = (j.error && j.error.message) || m; }catch(e){}
+      setStatus('失败：' + m, 1);
+    }
+  }catch(err){ setStatus('失败：' + (err && err.message ? err.message : err), 1); }
+}
+
+/* ---- 上传入口 ---- */
+function triggerUpload(){ $('#resumeFile').click(); }
+function onResumeFile(e){ const f = e.target.files && e.target.files[0]; e.target.value = ''; if(f) handleResumeFile(f); }
+function handleResumeFile(f){
+  const ext = (f.name.split('.').pop() || '').toLowerCase();
+  if(!['pdf','doc','docx'].includes(ext)){ toast('请选择 PDF 或 Word 文件'); return; }
+  if(ext === 'doc'){ toast('暂不支持旧版 .doc，请另存为 .docx 或 PDF'); return; }
+  const rd = new FileReader();
+  setBusy('正在解析简历…');
+  rd.onload = async function(){
+    try{
+      pendingParse = ext === 'pdf' ? await parsePdf(rd.result) : await parseDocx(rd.result);
+      if(!pendingParse.text.trim() && (!pendingParse.images || !pendingParse.images.length)){
+        clearBusy(); toast('未能从该文件提取内容（可能是扫描件或加密 PDF）'); return;
+      }
+      await finalizeParse();
+      renderResumeImgs();
+    }catch(err){ clearBusy(); console.error(err); toast('解析失败：' + (err && err.message ? err.message : err)); }
+  };
+  rd.onerror = function(){ clearBusy(); toast('文件读取失败'); };
+  rd.readAsArrayBuffer(f);
+}
+/* 拖拽支持 */
+function wireDrop(el, onFile){
+  ['dragenter','dragover'].forEach(function(ev){
+    el.addEventListener(ev, function(e){ e.preventDefault(); e.stopPropagation(); el.classList.add('over'); });
+  });
+  ['dragleave','drop'].forEach(function(ev){
+    el.addEventListener(ev, function(e){ e.preventDefault(); e.stopPropagation(); el.classList.remove('over'); });
+  });
+  el.addEventListener('drop', function(e){
+    const f = e.dataTransfer && e.dataTransfer.files && e.dataTransfer.files[0];
+    if(f) onFile(f);
+  });
+}
+/* 简历内照片：点击用作头像 */
+function renderResumeImgs(){
+  const box = $('#resumeImgs'); if(!box) return; box.innerHTML = '';
+  const imgs = (pendingParse && pendingParse.images) || [];
+  if(!imgs.length) return;
+  const label = document.createElement('div');
+  label.className = 'panel-head'; label.style.cssText = 'font-size:11px;margin:0 0 8px;';
+  label.textContent = '简历内照片（点击用作头像）';
+  box.appendChild(label);
+  imgs.forEach(function(im, i){
+    const el = document.createElement('img'); el.className = 'rimg'; el.src = im.dataUri; el.alt = '照片' + (i + 1); el.title = '用作头像';
+    el.addEventListener('click', function(){
+      compressImage(im.dataUri, function(uri){ RESUME_DATA.profile.avatar = uri; render(); $('#edAvatar').value = uri; toast('已设为头像'); });
+    });
+    box.appendChild(el);
+  });
+}
+
+/* ---- PDF：抽文本 + 抽嵌入图片 ---- */
+async function parsePdf(buf){
+  const pdf = await pdfjsLib.getDocument({ data: new Uint8Array(buf) }).promise;
+  let text = ''; const images = [];
+  for(let p = 1; p <= pdf.numPages; p++){
+    const page = await pdf.getPage(p);
+    const tc = await page.getTextContent();
+    text += tc.items.map(function(it){ return it.str || ''; }).join(' ') + '\n';
+    try{
+      const ops = await page.getOperatorList(); const objs = page.objs;
+      for(let i = 0; i < ops.fnArray.length; i++){
+        const fn = ops.fnArray[i];
+        if(fn !== pdfjsLib.OPS.paintImageXObject && fn !== pdfjsLib.OPS.paintInlineImageXObject) continue;
+        let img;
+        try{
+          if(fn === pdfjsLib.OPS.paintImageXObject){ img = objs.get(ops.argsArray[i][0]); }
+          else { img = ops.argsArray[i][0]; }
+        }catch(e){ continue; }
+        if(!img || !img.width || !img.height || img.width < 60 || img.height < 60) continue;
+        if(img.kind === pdfjsLib.ImageKind.GRAYSCALE_1BPP) continue;
+        const canvas = document.createElement('canvas'); canvas.width = img.width; canvas.height = img.height;
+        canvas.getContext('2d').putImageData(new ImageData(new Uint8ClampedArray(img.data), img.width, img.height), 0, 0);
+        images.push({ dataUri: canvas.toDataURL('image/jpeg', 0.85), w: img.width, h: img.height });
+      }
+    }catch(e){ /* 图片可选，失败不阻断 */ }
+  }
+  return { text: text.trim(), images: images };
+}
+
+/* ---- Word(.docx)：抽文本 + 抽嵌入图片 ---- */
+async function parseDocx(buf){
+  const r = await mammoth.convertToHtml({ arrayBuffer: buf }, {
+    convertImage: mammoth.images.imgElement(function(image){
+      return image.read('base64').then(function(b64){ return { src: 'data:' + image.contentType + ';base64,' + b64 }; });
+    })
+  });
+  const html = r.value;
+  const text = html.replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim();
+  const images = [];
+  const doc = new DOMParser().parseFromString(html, 'text/html');
+  doc.querySelectorAll('img').forEach(function(im){
+    const src = im.getAttribute('src') || '';
+    if(!/^data:image\//.test(src)) return;
+    let w = 0;
+    try{ const b64 = src.split(',')[1]; w = Math.round(Math.sqrt(b64.length / 1.33)); }catch(e){}
+    if(w < 60) return;
+    images.push({ dataUri: src, w: w, h: w });
+  });
+  return { text: text, images: images };
+}
+
+/* ---- 选头像 ---- */
+function openPhotoChooser(){
+  const grid = $('#photoGrid'); grid.innerHTML = ''; photoSel = -1;
+  $('#photoConfirm').disabled = true;
+  pendingParse.images.forEach(function(im, idx){
+    const b = document.createElement('button'); b.type = 'button'; b.className = 'photo-opt';
+    b.innerHTML = '<img src="' + im.dataUri + '" alt="候选 ' + (idx + 1) + '"><span class="tag">' + (idx + 1) + ' · ' + (im.w || '?') + '×' + (im.h || '?') + '</span>';
+    b.addEventListener('click', function(){
+      grid.querySelectorAll('.photo-opt').forEach(function(x){ x.classList.remove('sel'); });
+      b.classList.add('sel'); photoSel = idx; $('#photoConfirm').disabled = false;
+    });
+    grid.appendChild(b);
+  });
+  $('#photoModal').classList.add('show');
+}
+function closePhoto(){ $('#photoModal').classList.remove('show'); }
+
+/* ---- 头像压缩 ---- */
+function compressImage(dataUri, cb){
+  const img = new Image();
+  img.onload = function(){
+    const max = 320; const s = Math.min(1, max / Math.max(img.width, img.height));
+    const w = Math.max(1, Math.round(img.width * s)), h = Math.max(1, Math.round(img.height * s));
+    const c = document.createElement('canvas'); c.width = w; c.height = h;
+    c.getContext('2d').drawImage(img, 0, 0, w, h);
+    cb(c.toDataURL('image/jpeg', 0.82));
+  };
+  img.onerror = function(){ cb(dataUri); };
+  img.src = dataUri;
+}
+function onAvatarFile(e){ const f = e.target.files && e.target.files[0]; e.target.value = ''; if(f) handlePhotoFile(f); }
+function handlePhotoFile(f){
+  if(!/^image\//.test(f.type || '')){ toast('请选择图片文件（jpg / png）'); return; }
+  const rd = new FileReader();
+  rd.onload = function(){
+    compressImage(rd.result, function(uri){ RESUME_DATA.profile.avatar = uri; render(); $('#edAvatar').value = uri; toast('已设为头像'); });
+  };
+  rd.onerror = function(){ toast('图片读取失败'); };
+  rd.readAsDataURL(f);
+}
+
+/* ---- 调用模型结构化 ---- */
+async function finalizeParse(){
+  const cfg = getLLM();
+  if(!cfg.base_url || !cfg.api_key || !cfg.model){
+    clearBusy(); $('#rawText').value = pendingParse.text; $('#rawModal').classList.add('show'); return;
+  }
+  setBusy('正在调用模型识别内容…');
+  try{
+    const parsed = await structureWithLLM(pendingParse.text, cfg);
+    applyParsed(parsed);
+    clearBusy();
+    toast('已解析并填入模板，请检查后点「保存」');
+  }catch(err){
+    clearBusy(); console.error(err);
+    $('#rawText').value = pendingParse.text; $('#rawModal').classList.add('show');
+    toast('模型解析失败：' + (err && err.message ? err.message : err));
+  }
+}
+async function structureWithLLM(text, cfg){
+  const schema = '{"profile":{"avatar":"","name":"姓名","role":"职业头衔","summary":"个人简介"},"employment":[{"role":"岗位","company":"公司","location":"地点","period":"开始 – 结束","bullets":["要点1","要点2"]}],"education":[{"role":"学位","company":"学校","location":"地点","period":"时间","bullets":["要点"]}],"internships":[{"role":"实习岗位","company":"单位","location":"地点","period":"时间","bullets":["要点"]}],"details":{"address":["地址行1","地址行2"],"phone":"电话","email":"邮箱"},"skills":["技能1","技能2"],"languages":["语言1","语言2"]}';
+  const prompt = '你是简历结构化解析器。把下面这份简历文本转换成严格的 JSON 对象，字段名和结构必须与示例完全一致，类型一致：address 是字符串数组；employment/education/internships 按简历实际条目列出（只有简历明确出现实习经历时才填 internships），bullets 是各条目的职责/成就要点数组；skills 是技能数组；languages 是语言数组（没有则空数组）；profile.avatar 固定为空字符串""。只输出 JSON，不要任何额外文字、解释或代码块标记。\n\n输出结构示例：\n' + schema + '\n\n简历文本：\n' + text.slice(0, 16000);
+  const url = (cfg.base_url || '').replace(/\/+$/, '') + '/chat/completions';
+  const res = await fetch(url, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + cfg.api_key },
+    body: JSON.stringify({ model: cfg.model, temperature: 0.2, messages: [{ role: 'user', content: prompt }] })
+  });
+  if(!res.ok){
+    let m = 'HTTP ' + res.status;
+    try{ const j = await res.json(); m = (j.error && j.error.message) || m; }catch(e){}
+    throw new Error(m);
+  }
+  const data = await res.json();
+  const raw = (data.choices && data.choices[0] && data.choices[0].message && data.choices[0].message.content) || '';
+  const jsonStr = extractJSON(raw);
+  return normalize(JSON.parse(jsonStr));
+}
+function extractJSON(s){
+  s = s.replace(/```json/gi, '').replace(/```/g, '').trim();
+  const i = s.indexOf('{'), j = s.lastIndexOf('}');
+  return (i >= 0 && j > i) ? s.slice(i, j + 1) : s;
+}
+function normalize(p){
+  p = p || {};
+  const profile = p.profile || {}, det = p.details || {};
+  const em = Array.isArray(p.employment) ? p.employment : [];
+  const ed = Array.isArray(p.education) ? p.education : [];
+  return {
+    profile: { avatar: RESUME_DATA.profile.avatar || '', name: String(profile.name||''), role: String(profile.role||''), summary: String(profile.summary||'') },
+    employment: em.map(function(e){ return { role:String(e.role||''), company:String(e.company||''), location:String(e.location||''), period:String(e.period||''), bullets:Array.isArray(e.bullets)?e.bullets.map(String):[] }; }),
+    education: ed.map(function(e){ return { role:String(e.role||''), company:String(e.company||''), location:String(e.location||''), period:String(e.period||''), bullets:Array.isArray(e.bullets)?e.bullets.map(String):[] }; }),
+    details: { address:Array.isArray(det.address)?det.address.map(String):[], phone:String(det.phone||''), email:String(det.email||'') },
+    skills: Array.isArray(p.skills) ? p.skills.map(String) : [],
+    languages: Array.isArray(p.languages) ? p.languages.map(String) : [],
+    internships: Array.isArray(p.internships) ? p.internships.map(function(e){ return { role:String(e.role||''), company:String(e.company||''), location:String(e.location||''), period:String(e.period||''), bullets:Array.isArray(e.bullets)?e.bullets.map(String):[] }; }) : []
+  };
+}
+function applyParsed(p){
+  RESUME_DATA = p;
+  openEditor();
+  render();
+}
+
+/* 事件绑定 */
+document.getElementById('btnEditTop').addEventListener('click', openEditor);
+document.getElementById('btnEditSide').addEventListener('click', openEditor);
+document.getElementById('btnPrintTop').addEventListener('click', doPrint);
+document.getElementById('btnPrintSide').addEventListener('click', doPrint);
+document.getElementById('uploadBtn').addEventListener('click', triggerUpload);
+document.getElementById('btnSave').addEventListener('click', saveEditor);
+document.getElementById('btnReset').addEventListener('click', resetData);
+document.getElementById('overlay').addEventListener('click', closeEditor);
+document.getElementById('resumeFile').addEventListener('change', onResumeFile);
+document.getElementById('avatarFile').addEventListener('change', onAvatarFile);
+document.getElementById('dropResume').addEventListener('click', triggerUpload);
+document.getElementById('dropPhoto').addEventListener('click', function(){ $('#avatarFile').click(); });
+wireDrop($('dropResume'), handleResumeFile);
+wireDrop($('dropPhoto'), handlePhotoFile);
+document.getElementById('photoConfirm').addEventListener('click', function(){
+  if(photoSel >= 0){ compressImage(pendingParse.images[photoSel].dataUri, function(uri){ RESUME_DATA.profile.avatar = uri; render(); $('#edAvatar').value = uri; toast('已设为头像'); }); }
+  closePhoto();
+});
+document.getElementById('photoNone').addEventListener('click', function(){ closePhoto(); });
+document.getElementById('photoUpload').addEventListener('click', function(){ closePhoto(); $('#avatarFile').click(); });
+document.getElementById('rawClose').addEventListener('click', function(){ $('#rawModal').classList.remove('show'); });
+document.getElementById('rawRetry').addEventListener('click', function(){ $('#rawModal').classList.remove('show'); finalizeParse(); });
+document.getElementById('btnTestApi').addEventListener('click', testAPI);
+['cfgBase','cfgKey','cfgModel'].forEach(function(id){ document.getElementById(id).addEventListener('change', saveLLM); });
+document.addEventListener('keydown', function(e){
+  if(e.key === 'Escape'){ closeEditor(); $('#photoModal').classList.remove('show'); $('#rawModal').classList.remove('show'); }
+});
+// pdf.js worker（file:// 打开时若加载失败会自动回退到主线程解析）
+if(window.pdfjsLib){ pdfjsLib.GlobalWorkerOptions.workerSrc = 'lib/pdf.worker.min.js'; }
+
+initCfgUI();
+renderTemplates();
+render();
+document.title='pdf='+(typeof pdfjsLib!=='undefined')+'|worker='+((typeof pdfjsLib!=='undefined')?pdfjsLib.GlobalWorkerOptions.workerSrc:'none')+'|mammoth='+(typeof mammoth!=='undefined');
+if(document.fonts && document.fonts.ready){ document.fonts.ready.then(fitToPage); }
+window.addEventListener('load', fitToPage);
+</script>
+</body>
+</html>
